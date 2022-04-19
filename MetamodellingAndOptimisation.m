@@ -1,3 +1,5 @@
+% Metamodelling Step
+
 data = csvread('optidata.csv'); % Reads from CSV file
 input = data(:,1:4); % Design Variables
 stress = data(:,5); % Stress Data
@@ -116,7 +118,7 @@ Rmse_4 = sqrt(norm(input_newTest2'*beta4 - stress_newTest2')^2/length(stress_new
 Rmse_5 = sqrt(norm(input_newTest2'*beta5 - mass_newTest2')^2/length(mass_newTest2));
 Rmse_6 = sqrt(norm(input_newTest2'*beta6 - deflection_newTest2')^2/length(deflection_newTest2));
 
-%Optimisation using the Genetic Algorithm Method
+% Optimisation using the Genetic Algorithm Method.
 
 clear all; % Clears the matlab workspace
 
@@ -157,7 +159,7 @@ function [c,ceq] = nonlcon(x)
 end
 
 
-%Optimisation using the SQP Method
+%Optimisation using the SQP Method.
 
 % Sets optimisation options where the solver used is 'fmincon'. 
 % The iterations are set to be displayed, and the optimisation algorithm
